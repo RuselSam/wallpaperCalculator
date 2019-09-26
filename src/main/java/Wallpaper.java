@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class wallpaper {
+public class Wallpaper {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the length of the room: ");
