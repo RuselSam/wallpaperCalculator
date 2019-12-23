@@ -4,14 +4,25 @@ import ru.itpark.model.Room;
 import ru.itpark.model.Wallpaper;
 
 public class WallpaperService{
+        public double addRoom(double height, double length, double width) {
+            Room room = new Room();
+            room.setRoomHeight(height);
+            room.setRoomLength(length);
+            room.setRoomWidth(width);
+            return room.roomWallArea();
+            }
 
-        Room room = new Room();
-        Wallpaper wallpaper = new Wallpaper();
+            public double addWallpaper(double length, double width) {
+                Wallpaper wallpaper = new Wallpaper();
+                wallpaper.setWallpaperLength(length);
+                wallpaper.setWallpaperWidth(width);
+                return wallpaper.wallpaperArea();
+            }
 
         public double numbersOfRoll () {
-            double numb = room.roomWallArea() / wallpaper.wallpaperArea();
+            double numb = addRoom() / addWallpaper();
             double finalNumbersOfRoll = (int) numb;
-            if (room.roomWallArea() % wallpaper.wallpaperArea() > 0) {
+            if (addRoom() % addWallpaper() > 0) {
                 finalNumbersOfRoll++;
             } else {
                 return finalNumbersOfRoll;

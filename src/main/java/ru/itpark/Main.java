@@ -5,10 +5,13 @@ import ru.itpark.service.WallpaperService;
 
 public class Main {
     public static void main(String[] args) {
-        Room room = new Room(2,4,5.5,);
-        WallpaperService wallpaperService = new WallpaperService();
-        wallpaperService.numbersOfRoll();
-        System.out.println(wallpaperService);
-    }
 
+        WallpaperService service = new WallpaperService();
+        service.addRoom(2.5, 6.6, 5);
+        service.addWallpaper(10, 1);
+        double s = service.numbersOfRoll();
+        System.out.println(s);
+
+
+    }
 }
