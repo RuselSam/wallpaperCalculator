@@ -12,11 +12,9 @@ public class Room {
     private double roomHeight;
     private double roomLength;
     private double roomWidth;
-    final static double wallpaperWallHeightReserve = 0.1;
-    private final double roomHeightGluingMargin = roomHeight + wallpaperWallHeightReserve;
 
     public double roomWallArea() {
-        double roomWallAreaResult = (roomLength * 2 + roomWidth * 2) * roomHeightGluingMargin;
+        double roomWallAreaResult = (roomLength * 2 + roomWidth * 2) * roomHeight;
         return roomWallAreaResult;
     }
 }

@@ -18,16 +18,4 @@ public class WallpaperService{
                 wallpaper.setWallpaperWidth(width);
                 return wallpaper.wallpaperArea();
             }
-
-        public double numbersOfRoll () {
-            double numb = addRoom() / addWallpaper();
-            double finalNumbersOfRoll = (int) numb;
-            if (addRoom() % addWallpaper() > 0) {
-                finalNumbersOfRoll++;
-            } else {
-                return finalNumbersOfRoll;
-            }
-            return finalNumbersOfRoll;
-        }
-
 }
